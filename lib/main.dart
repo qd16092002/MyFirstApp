@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
 import 'package:untitled/screens/home/components/home_screen.dart';
 import 'package:flutter/src/painting/gradient.dart';
+import 'package:untitled/screens/home/tab2/new_home_screen.dart';
+import 'package:untitled/screens/home/tab3/home_sreen_3.dart';
+
 void main() {
   runApp(
       // const MaterialApp(
@@ -96,72 +99,72 @@ void main() {
 //       extendBodyBehindAppBar: true,
 //       appBar: AppBar(
 //         backgroundColor: Colors.orangeAccent,
-      //   leading: IconButton(
-      //       icon: const Icon(Icons.arrow_back_ios),
-      //       tooltip: 'Back',
-      //       onPressed: () {
-      //         if (kDebugMode) {
-      //           print("bbbb");
-      //         }
-      //       }),
-      //   // title: const Center(
-      //   //   child: Text('This is my first app'),
-      //   // ),
-      //   actions: <Widget>[
-      //     IconButton(
-      //       icon: const Icon(Icons.circle_notifications),
-      //       tooltip: "Thông báo",
-      //       onPressed: () {
-      //
-      //       },
-      //     ),
-      //   ],
-      // ),
-      // body: SafeArea(
-      //   child: Stack(children: [
-      //     Container(
-      //       decoration: const BoxDecoration(
-      //         gradient: LinearGradient(
-      //           colors: [
-      //             Colors.blueAccent,
-      //           ],
-      //           begin: Alignment.topCenter,
-      //           end: Alignment.bottomCenter,
-      //         ),
-      //       ),
-      //       child: const Align(
-      //           alignment: Alignment.center,
-      //           child: Text('Your Balance', // This is a string
-      //               style: TextStyle(fontSize: 30),
-      //               // how to increase text size?
-      //               textDirection: TextDirection.ltr) // left to right),
-      //           ),
-      //     ),
-      //     // Column(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: const <Widget>[
-          //     TextField(
-          //       decoration: InputDecoration(labelText: 'Content'),
-          //     ),
-          //     TextField(
-          //       decoration: InputDecoration(labelText: 'Amount'),
-          //     ),
-          //   ],
-          //  ),
-          // ListView.separated(
-          //   padding: const EdgeInsets.all(8),
-          //   itemCount: entries.length,
-          //   itemBuilder: (BuildContext context, int index) {
-          //     return Container(
-          //       height: 50,
-          //
-          //       color: Colors.amber[colorCodes[index]],
-          //       child: Center(child: Text('Mục ${entries[index]}')),
-          //     );
-          //   },
-          //   separatorBuilder: (BuildContext context, int index) =>
-          //       const Divider(),
-          // )
+//   leading: IconButton(
+//       icon: const Icon(Icons.arrow_back_ios),
+//       tooltip: 'Back',
+//       onPressed: () {
+//         if (kDebugMode) {
+//           print("bbbb");
+//         }
+//       }),
+//   // title: const Center(
+//   //   child: Text('This is my first app'),
+//   // ),
+//   actions: <Widget>[
+//     IconButton(
+//       icon: const Icon(Icons.circle_notifications),
+//       tooltip: "Thông báo",
+//       onPressed: () {
+//
+//       },
+//     ),
+//   ],
+// ),
+// body: SafeArea(
+//   child: Stack(children: [
+//     Container(
+//       decoration: const BoxDecoration(
+//         gradient: LinearGradient(
+//           colors: [
+//             Colors.blueAccent,
+//           ],
+//           begin: Alignment.topCenter,
+//           end: Alignment.bottomCenter,
+//         ),
+//       ),
+//       child: const Align(
+//           alignment: Alignment.center,
+//           child: Text('Your Balance', // This is a string
+//               style: TextStyle(fontSize: 30),
+//               // how to increase text size?
+//               textDirection: TextDirection.ltr) // left to right),
+//           ),
+//     ),
+//     // Column(
+//   mainAxisAlignment: MainAxisAlignment.center,
+//   children: const <Widget>[
+//     TextField(
+//       decoration: InputDecoration(labelText: 'Content'),
+//     ),
+//     TextField(
+//       decoration: InputDecoration(labelText: 'Amount'),
+//     ),
+//   ],
+//  ),
+// ListView.separated(
+//   padding: const EdgeInsets.all(8),
+//   itemCount: entries.length,
+//   itemBuilder: (BuildContext context, int index) {
+//     return Container(
+//       height: 50,
+//
+//       color: Colors.amber[colorCodes[index]],
+//       child: Center(child: Text('Mục ${entries[index]}')),
+//     );
+//   },
+//   separatorBuilder: (BuildContext context, int index) =>
+//       const Divider(),
+// )
 //         ]
 //         ),
 //       ),
@@ -175,6 +178,7 @@ void main() {
 // }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -185,9 +189,13 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const HomeScreen(),
+      home: HomeScreen(),
+      routes: {
+        '/newhome':(_)=> const NewHomeScreen(),
+        '/myhomepage':(_)=> MyHomePage(),
+        '/back':(_)=> const HomeScreen(),
+      },
+      //HomeScreen(),
     );
   }
 }
-
-
