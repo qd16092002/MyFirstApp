@@ -3,6 +3,7 @@ import 'package:untitled/constants.dart';
 
 class HeaderWithSearchBox extends StatelessWidget {
   const HeaderWithSearchBox({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -19,8 +20,10 @@ class HeaderWithSearchBox extends StatelessWidget {
                   Text(
                     'Welcome Back',
                     softWrap: true,
-                    style: Theme.of(context).textTheme.headline3?.copyWith(
-                        color: Colors.blueGrey),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline3
+                        ?.copyWith(color: Colors.blueGrey),
                   ),
                 ],
               ),
@@ -58,6 +61,7 @@ class HeaderWithSearchBox extends StatelessWidget {
           ),
           child: Row(
             children: <Widget>[
+              const SizedBox(width: 10),
               Expanded(
                 child: TextField(
                   onChanged: (value) {},

@@ -21,12 +21,11 @@ class HomeScreen extends StatelessWidget {
       elevation: 0,
       leading: IconButton(
           icon: const Icon(Icons.menu_outlined),
-          tooltip: 'Back',
+          tooltip: 'Menu',
           onPressed: () {
             if (kDebugMode) {
-              print("Back");
+              print("Menu");
             }
-
           },
         iconSize: 40,
         color: Colors.black,
