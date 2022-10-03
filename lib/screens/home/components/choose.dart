@@ -26,13 +26,12 @@ class Choose extends StatelessWidget {
               ),
               Row(
                 children: <Widget>[
-                  Container(
+                  Expanded(child: Container(
                     padding: const EdgeInsets.all(19),
-                    height: 70,
-                    width: 145,
+                    height: 80,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(color: Colors.black)
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.black)
                     ),
                     child: Row(
                       children: <Widget>[
@@ -41,31 +40,30 @@ class Choose extends StatelessWidget {
                             Icon(Icons.other_houses_sharp,size: 25,)
                           ],
                         ),
-                        const SizedBox(width: 10,),
+                        const SizedBox(width: 15,),
                         Column(
                           children: [
                             Row(
                               children: const <Widget>[
-                                Text('Branch'),
+                                Text('Branch',style: TextStyle(fontSize: 15),),
                               ],
                             ),
                             Row(
                               children: const <Widget>[
-                                Text("  Services"),
+                                Text("  Services",style: TextStyle(fontSize: 15),),
                               ],
                             ),
                           ],
                         )
                       ],
                     ),
-                  ),
+                  ),),
                   const SizedBox(
                     width: 20,
                   ),
-                  Container(
+                  Expanded(child: Container(
                     padding: const EdgeInsets.all(19),
-                    height: 70,
-                    width: 145,
+                    height: 80,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         border: Border.all(color: Colors.black)
@@ -77,24 +75,24 @@ class Choose extends StatelessWidget {
                             Icon(Icons.payment_rounded,size: 25,)
                           ],
                         ),
-                        const SizedBox(width: 10,),
+                        const SizedBox(width: 15,),
                         Column(
                           children: [
                             Row(
                               children: const <Widget>[
-                                Text('Make a'),
+                                Text('Make a',style: TextStyle(fontSize: 15),),
                               ],
                             ),
                             Row(
                               children: const <Widget>[
-                                Text("  Payment"),
+                                Text("  Payment",style: TextStyle(fontSize: 15),),
                               ],
                             ),
                           ],
                         )
                       ],
                     ),
-                  ),
+                  ),),
                 ],
               ),
             ],
