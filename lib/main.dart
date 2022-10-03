@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
       home: const HomeScreen(),
       routes: {
         '/newhome':(_)=> const NewHomeScreen(),
+        '/myhomepage':(_)=> MyHomePage(),
         '/back':(_)=> const HomeScreen(),
       },
       //HomeScreen(),
