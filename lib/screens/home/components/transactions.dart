@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
 import 'package:untitled/screens/home/tab2/new_home_screen.dart';
 
+
 class Transactions extends StatelessWidget {
   const Transactions({Key? key}) : super(key: key);
 
@@ -75,13 +76,15 @@ class Transactions extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        const Icon(
-                          Icons.temple_buddhist,
-                          size: 60,
-                          color: Colors.white,
+                        IconButton(
+                          icon: const Icon(Icons.temple_buddhist,size: 60,color: Colors.white,),
+                          tooltip: "Transactions",
+                          onPressed: () {
+                            Navigator.of(context).pushNamed('/myhomepage');
+                          },
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 25,
                         ),
                         Row(
                           children: const [

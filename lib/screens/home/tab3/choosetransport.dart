@@ -20,7 +20,7 @@ class ChoseTransport extends StatelessWidget {
       child: Column(
         children: <Widget>[
           const SizedBox(
-            height: 80,
+            height: 20,
           ),
           const Padding(
             padding: EdgeInsets.only(right: 90),
