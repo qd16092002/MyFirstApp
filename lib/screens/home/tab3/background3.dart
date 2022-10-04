@@ -14,7 +14,6 @@ class BackGround3 extends StatelessWidget {
     return Column(
       children: <Widget>[
         Container(
-          height: size.height,
           color: const Color(0xFF3A9EC0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

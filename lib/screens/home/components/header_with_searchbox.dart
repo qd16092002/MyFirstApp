@@ -16,27 +16,17 @@ class HeaderWithSearchBox extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Row(
-                children: [
-                  Text(
-                    'Welcome Back',
-                    softWrap: true,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline3
-                        ?.copyWith(color: Colors.blueGrey),
-                  ),
+                children: const <Widget>[
+                  SizedBox(width: 10,),
+                  Text('Welcome Back',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.blueGrey),),
                 ],
               ),
               Row(
-                children: [
-                  Text(
-                    'Creative Mints',
-                    softWrap: true,
-                    style: Theme.of(context).textTheme.headline3?.copyWith(
-                        color: Colors.black, fontWeight: FontWeight.normal),
-                  ),
+                children: const <Widget>[
+                  SizedBox(width: 10,),
+                  Text('Creative Mints',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.black),),
                 ],
-              ),
+              )
             ],
           ),
         ),

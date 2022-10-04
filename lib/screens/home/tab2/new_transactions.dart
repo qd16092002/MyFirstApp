@@ -10,7 +10,7 @@ class NewTransactions extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
         child: Container(
-      height: size.height * 0.5,
+      // height: size.height * 0.5,
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -27,7 +27,7 @@ class NewTransactions extends StatelessWidget {
               children: <Widget>[
                 const TitleWithCustomUnderLine(text: "Transactions"),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFEFF1FD),),
+                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFEFF1FD),),
                   onPressed: () {},
                   child: const Text('See All',style: TextStyle(color: Color(0xFF395376)),),
                 ),

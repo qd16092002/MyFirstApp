@@ -34,7 +34,7 @@ class Box extends StatelessWidget {
                         children: const [
                           Text(
                             '\$5,000',
-                            style: TextStyle(fontSize: 30, color: Colors.black),
+                            style: TextStyle(fontSize: 25, color: Colors.black),
                           ),
                         ],
                       ),
@@ -46,7 +46,7 @@ class Box extends StatelessWidget {
                           Text(
                             'Expense',
                             style:
-                                TextStyle(fontSize: 15, color: Color(0xFF62929E),fontWeight: FontWeight.bold),
+                                TextStyle(fontSize: 13, color: Color(0xFF62929E),fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -80,7 +80,7 @@ class Box extends StatelessWidget {
                         children: const [
                           Text(
                             '\$15,000',
-                            style: TextStyle(fontSize: 30, color: Colors.black),
+                            style: TextStyle(fontSize: 25, color: Colors.black),
                           ),
                         ],
                       ),
@@ -92,7 +92,7 @@ class Box extends StatelessWidget {
                           Text(
                             'Spend to Goals',
                             style:
-                                TextStyle(fontSize: 15, color: Color(0xFF957866),fontWeight: FontWeight.bold),
+                                TextStyle(fontSize: 13, color: Color(0xFF957866),fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),

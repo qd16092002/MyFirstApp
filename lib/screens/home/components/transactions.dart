@@ -19,51 +19,50 @@ class Transactions extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Expanded(
-                    child: Container(
-                      padding: const EdgeInsets.all(20),
-                      height: 145,
-                      width: 145,
-                      decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          IconButton(
-                            icon: const Icon(
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).pushNamed('/newhome');
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        height: 145,
+                        width: 145,
+                        decoration: BoxDecoration(
+                          color: Colors.greenAccent,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            const Icon(
                               Icons.monetization_on,
-                              size: 60,
+                              size: 55,
                               color: Colors.white,
                             ),
-                            tooltip: "Transactions",
-                            onPressed: () {
-                              Navigator.of(context).pushNamed('/newhome');
-                            },
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            children: const [
-                              Text(
-                                'Transactions',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.white),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: const [
-                              Text(
-                                '7 Items',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ],
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: const [
+                                Text(
+                                  'Transactions',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Text(
+                                  '7 Items',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -71,50 +70,49 @@ class Transactions extends StatelessWidget {
                     width: 20,
                   ),
                   Expanded(
-                    child: Container(
-                      padding: const EdgeInsets.all(20),
-                      height: 145,
-                      width: 145,
-                      decoration: BoxDecoration(
-                        color: Colors.redAccent,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          IconButton(
-                            icon: const Icon(
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).pushNamed('/myhomepage');
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        height: 145,
+                        width: 145,
+                        decoration: BoxDecoration(
+                          color: Colors.redAccent,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            const Icon(
                               Icons.temple_buddhist,
-                              size: 60,
+                              size: 55,
                               color: Colors.white,
                             ),
-                            tooltip: "Transactions",
-                            onPressed: () {
-                              Navigator.of(context).pushNamed('/myhomepage');
-                            },
-                          ),
-                          const SizedBox(
-                            height: 25,
-                          ),
-                          Row(
-                            children: const [
-                              Text(
-                                'Budget',
-                                style: TextStyle(
-                                    fontSize: 13, color: Colors.white),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: const [
-                              Text(
-                                '4 Items',
-                                style: TextStyle(
-                                    fontSize: 13, color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ],
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: const [
+                                Text(
+                                  'Budget',
+                                  style: TextStyle(
+                                      fontSize: 13, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Text(
+                                  '4 Items',
+                                  style: TextStyle(
+                                      fontSize: 13, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -139,7 +137,7 @@ class Transactions extends StatelessWidget {
                         children: <Widget>[
                           const Icon(
                             Icons.stars_rounded,
-                            size: 60,
+                            size: 55,
                             color: Colors.white,
                           ),
                           const SizedBox(
@@ -184,7 +182,7 @@ class Transactions extends StatelessWidget {
                         children: <Widget>[
                           const Icon(
                             Icons.credit_card_sharp,
-                            size: 60,
+                            size: 55,
                             color: Colors.white,
                           ),
                           const SizedBox(

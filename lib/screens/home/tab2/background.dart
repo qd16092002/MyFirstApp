@@ -48,7 +48,7 @@ class BackGround extends StatelessWidget {
               ),
                const Box(),
               const SizedBox(
-                height: 30,
+                height: 35,
               ),
               const NewTransactions(),
             ],

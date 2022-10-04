@@ -23,13 +23,13 @@ class ChoseTransport extends StatelessWidget {
             height: 20,
           ),
           const Padding(
-            padding: EdgeInsets.only(right: 90),
+            padding: EdgeInsets.only(right: 160),
             child: Text(
               'Choose your Transport',
               style: TextStyle(
                 fontSize: 23,
                 color: Colors.black,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w800,
               ),
             ),
           ),
@@ -40,7 +40,7 @@ class ChoseTransport extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Container(
-                  height: 160,
+                  height: 180,
                   width: size.width * 0.8,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
@@ -50,8 +50,11 @@ class ChoseTransport extends StatelessWidget {
                     children: <Widget>[
                       Column(
                         children: <Widget>[
+                          const SizedBox(
+                            height: 20,
+                          ),
                           const Padding(
-                              padding: EdgeInsets.only(top: 20,left: 0),
+                            padding: EdgeInsets.only(top: 20, left: 0),
                             child: Text(
                               'Bus',
                               style: TextStyle(
@@ -61,20 +64,32 @@ class ChoseTransport extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 40,left: 20),
+                            padding: const EdgeInsets.only(top: 40, left: 20),
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color(0xFFEFF1FD),
                                 ),
                                 onPressed: () {},
-                                child: const Text('Select',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),)),
+                                child: const Text(
+                                  'Select',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                )),
                           )
                         ],
                       ),
-                      const SizedBox(
-                        width: 30,
+                      const Expanded(
+                        child: SizedBox(
+                          width: 70,
+                        ),
                       ),
-                      Image.asset('assets/images/bus.png',width: 180,height: 200,),
+                      Image.asset(
+                        'assets/images/bus.png',
+                        width: 180,
+                        height: 400,
+                      ),
                     ],
                   ),
                 ),
@@ -82,7 +97,7 @@ class ChoseTransport extends StatelessWidget {
                   height: 20,
                 ),
                 Container(
-                  height: 160,
+                  height: 180,
                   width: size.width * 0.8,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
@@ -92,8 +107,11 @@ class ChoseTransport extends StatelessWidget {
                     children: <Widget>[
                       Column(
                         children: <Widget>[
+                          const SizedBox(
+                            height: 20,
+                          ),
                           const Padding(
-                            padding: EdgeInsets.only(top: 20,left: 0),
+                            padding: EdgeInsets.only(top: 20, left: 0),
                             child: Text(
                               'MRT',
                               style: TextStyle(
@@ -103,20 +121,32 @@ class ChoseTransport extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 40,left: 20),
+                            padding: const EdgeInsets.only(top: 40, left: 20),
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color(0xFFEFF1FD),
+                                  backgroundColor: const Color(0xFFEFF1FD),
                                 ),
                                 onPressed: () {},
-                                child: const Text('Select',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),)),
+                                child: const Text(
+                                  'Select',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                )),
                           )
                         ],
                       ),
-                      const SizedBox(
-                        width: 30,
+                      const Expanded(
+                        child: SizedBox(
+                          width: 30,
+                        ),
                       ),
-                      Image.asset('assets/images/train.png',width: 180,height: 200,),
+                      Image.asset(
+                        'assets/images/train.png',
+                        width: 180,
+                        height: 400,
+                      ),
                     ],
                   ),
                 )

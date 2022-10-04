@@ -29,7 +29,7 @@ class FlipBoxBar extends StatefulWidget {
     this.animationDuration = const Duration(seconds: 1),
     required this.onIndexChanged,
     required this.selectedIndex,
-    this.navBarHeight = 80.0,
+    this.navBarHeight = 60.0,
   });
 
   @override
@@ -61,8 +61,8 @@ class _FlipBoxBarState extends State<FlipBoxBar> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     _changeValue();
-    return Container(
-      height: 80.0,
+    return SizedBox(
+      height: 60.0,
       child: Row(
         children: widget.items.map((item) {
           int index = widget.items.indexOf(item);
