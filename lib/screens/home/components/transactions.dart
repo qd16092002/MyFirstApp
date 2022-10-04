@@ -1,7 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/constants.dart';
-import 'package:untitled/screens/home/tab2/new_home_screen.dart';
 
 class Transactions extends StatelessWidget {
   const Transactions({Key? key}) : super(key: key);
@@ -175,7 +172,7 @@ class Transactions extends StatelessWidget {
                       width: 145,
                       decoration: BoxDecoration(
                         color: Colors.indigo,
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(16),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
