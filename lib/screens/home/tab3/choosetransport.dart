@@ -142,8 +142,6 @@ class ChoseTransport extends StatelessWidget {
                       ),
                       Image.asset(
                         'assets/images/train.png',
-                        // width: 180,
-                        // height: 400,
                       ),
                     ],
                   ),
