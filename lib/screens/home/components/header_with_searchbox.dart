@@ -18,13 +18,13 @@ class HeaderWithSearchBox extends StatelessWidget {
               Row(
                 children: const <Widget>[
                   SizedBox(width: 10,),
-                  Text('Welcome Back',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.blueGrey),),
+                  Expanded(child: Text('Welcome Back',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.blueGrey,),softWrap: false,maxLines: 1,),)
                 ],
               ),
               Row(
                 children: const <Widget>[
                   SizedBox(width: 10,),
-                  Text('Creative Mints',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.black),),
+                  Expanded(child: Text('Creative Mints',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.black),softWrap: false,maxLines: 1,),)
                 ],
               )
             ],
@@ -42,7 +42,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
               BoxShadow(
-                offset: const Offset(0, 30),
+                offset: const Offset(30, 30),
                 blurRadius: 10,
                 color: kPrimaryColor.withOpacity(0),
               ),

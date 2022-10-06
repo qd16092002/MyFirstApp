@@ -17,7 +17,7 @@ class Transactions extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.of(context).pushNamed('/newhome');
                       },
                       child: Container(
@@ -42,11 +42,11 @@ class Transactions extends StatelessWidget {
                             ),
                             Row(
                               children: const [
-                                Text(
+                                Expanded(child: Text(
                                   'Transactions',
                                   style: TextStyle(
-                                      fontSize: 15, color: Colors.white),
-                                ),
+                                      fontSize: 15, color: Colors.white),softWrap: false,maxLines: 1,
+                                ),)
                               ],
                             ),
                             Row(
@@ -68,7 +68,7 @@ class Transactions extends StatelessWidget {
                   ),
                   Expanded(
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.of(context).pushNamed('/myhomepage');
                       },
                       child: Container(
@@ -92,11 +92,11 @@ class Transactions extends StatelessWidget {
                             ),
                             Row(
                               children: const [
-                                Text(
+                                Expanded(child: Text(
                                   'Budget',
                                   style: TextStyle(
-                                      fontSize: 13, color: Colors.white),
-                                ),
+                                      fontSize: 13, color: Colors.white),softWrap: false,maxLines: 1,
+                                ),)
                               ],
                             ),
                             Row(
@@ -142,11 +142,15 @@ class Transactions extends StatelessWidget {
                           ),
                           Row(
                             children: const [
-                              Text(
-                                'Recommendations',
-                                style: TextStyle(
-                                    fontSize: 13, color: Colors.white),
-                              ),
+                              Expanded(
+                                child: Text(
+                                  'Recommendations',
+                                  style: TextStyle(
+                                      fontSize: 13, color: Colors.white),
+                                  softWrap: false,
+                                  maxLines: 1,
+                                ),
+                              )
                             ],
                           ),
                           Row(
@@ -187,11 +191,11 @@ class Transactions extends StatelessWidget {
                           ),
                           Row(
                             children: const [
-                              Text(
+                              Expanded(child: Text(
                                 'Credit Cards',
                                 style: TextStyle(
-                                    fontSize: 13, color: Colors.white),
-                              ),
+                                    fontSize: 13, color: Colors.white),softWrap: false,maxLines: 1,
+                              ),)
                             ],
                           ),
                           Row(

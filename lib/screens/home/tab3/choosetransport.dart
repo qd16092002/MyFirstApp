@@ -8,7 +8,7 @@ class ChoseTransport extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
         child: Container(
-      height: size.height * 0.698,
+      // height: size.height * 0.6,
       width: size.width,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -85,11 +85,9 @@ class ChoseTransport extends StatelessWidget {
                           width: 70,
                         ),
                       ),
-                      Image.asset(
+                      Expanded(child: Image.asset(
                         'assets/images/bus.png',
-                        width: 180,
-                        height: 400,
-                      ),
+                      ),)
                     ],
                   ),
                 ),
@@ -144,8 +142,8 @@ class ChoseTransport extends StatelessWidget {
                       ),
                       Image.asset(
                         'assets/images/train.png',
-                        width: 180,
-                        height: 400,
+                        // width: 180,
+                        // height: 400,
                       ),
                     ],
                   ),
