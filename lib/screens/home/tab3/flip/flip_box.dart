@@ -18,7 +18,7 @@ class FlipBox extends StatefulWidget {
   /// Callback for when the box is selected (Not when the box is reversed).
   final VoidCallback onTapped;
 
-  FlipBox({
+  const FlipBox({
     required this.bottomChild,
     required this.topChild,
     this.height = 100.0,
@@ -42,7 +42,7 @@ class _FlipBoxState extends State<FlipBox> with SingleTickerProviderStateMixin {
     super.initState();
     if (widget.controller == null) {
       controller = AnimationController(
-          vsync: this, duration: Duration(milliseconds: 2000));
+          vsync: this, duration: const Duration(milliseconds: 2000));
     } else {
       controller = widget.controller;
     }
@@ -57,7 +57,7 @@ class _FlipBoxState extends State<FlipBox> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: widget.height,
       width: double.infinity,
       child: Stack(
@@ -69,9 +69,7 @@ class _FlipBoxState extends State<FlipBox> with SingleTickerProviderStateMixin {
               ..translate(0.0, -(cos(animation.value) * (widget.height / 2)),
                   ((-widget.height / 2) * sin(animation.value)))
               ..rotateX(-(pi / 2) + animation.value),
-            child: Container(
-              child: Center(child: widget.bottomChild),
-            ),
+            child: Center(child: widget.bottomChild),
           ),
           GestureDetector(
             onTap: () {
@@ -89,9 +87,7 @@ class _FlipBoxState extends State<FlipBox> with SingleTickerProviderStateMixin {
                   -((widget.height / 2) * cos(animation.value)),
                 )
                 ..rotateX(animation.value),
-              child: Container(
-                child: Center(child: widget.topChild),
-              ),
+              child: Center(child: widget.topChild),
             )
                 : Container(),
           ),

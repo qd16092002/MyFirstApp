@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
 
 class TitleWithCustomUnderLine extends StatelessWidget {
   const TitleWithCustomUnderLine({Key? key, required this.text}) : super(key: key);

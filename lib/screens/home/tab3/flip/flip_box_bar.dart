@@ -4,8 +4,6 @@ import 'flip_bar_element.dart';
 import 'flip_bar_item.dart';
 import 'package:flutter/material.dart';
 
-import 'flip_bar_element.dart';
-import 'flip_bar_item.dart';
 
 /// Top level widget for BottomNavigationBar.
 class FlipBoxBar extends StatefulWidget {
@@ -24,7 +22,7 @@ class FlipBoxBar extends StatefulWidget {
   /// The height of the BottomNavBar.
   final double navBarHeight;
 
-  const FlipBoxBar({
+  const FlipBoxBar({super.key,
     required this.items,
     this.animationDuration = const Duration(seconds: 1),
     required this.onIndexChanged,
@@ -38,7 +36,7 @@ class FlipBoxBar extends StatefulWidget {
 
 class _FlipBoxBarState extends State<FlipBoxBar> with TickerProviderStateMixin {
   /// Hosts all the controllers controlling the boxes.
-  List<AnimationController> _controllers = [];
+  final List<AnimationController> _controllers = [];
 
   @override
   void initState() {
@@ -88,13 +86,17 @@ class _FlipBoxBarState extends State<FlipBoxBar> with TickerProviderStateMixin {
   }
 
   void _changeValue() {
-    _controllers.forEach((controller) => controller.reverse());
+    for (var controller in _controllers) {
+      controller.reverse();
+    }
     _controllers[widget.selectedIndex].forward();
   }
 
   @override
   void dispose() {
     super.dispose();
-    _controllers.forEach((controller) => controller.dispose());
+    for (var controller in _controllers) {
+      controller.dispose();
+    }
   }
 }

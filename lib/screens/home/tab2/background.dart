@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
-import 'package:untitled/screens/home/components/transactions.dart';
 import 'package:untitled/screens/home/tab2/new_transactions.dart';
 import 'newbox.dart';
 

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/constants.dart';
-import 'package:untitled/screens/home/components/transactions.dart';
-import 'package:untitled/screens/home/tab2/new_transactions.dart';
 import 'package:untitled/screens/home/tab3/choosetransport.dart';
 import 'package:untitled/screens/home/tab3/searchbox.dart';
 
@@ -10,7 +7,6 @@ class BackGround3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
         Container(
