@@ -6,7 +6,6 @@ class HeaderWithSearchBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -17,14 +16,39 @@ class HeaderWithSearchBox extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: const <Widget>[
-                  SizedBox(width: 10,),
-                  Expanded(child: Text('Welcome Backkkkkkkkkkkkkkkkkkkkkkkkkkkkk',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.blueGrey,),softWrap: false,maxLines: 1,),)
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Text(
+                      'Welcome Back',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueGrey,
+                      ),
+                      softWrap: false,
+                      maxLines: 1,
+                    ),
+                  )
                 ],
               ),
               Row(
                 children: const <Widget>[
-                  SizedBox(width: 10,),
-                  Expanded(child: Text('Creative Mintsssssssssssssssssssssssss',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.black),softWrap: false,maxLines: 1,),)
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Text(
+                      'Creative Mints',
+                      style: TextStyle(
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      softWrap: false,
+                      maxLines: 1,
+                    ),
+                  )
                 ],
               )
             ],
