@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
+import 'package:untitled/screens/home/Bagri/bagri_body.dart';
+import 'package:untitled/screens/home/Bagri/bagri_home_screen.dart';
 import 'package:untitled/screens/home/components/home_screen.dart';
 import 'package:flutter/src/painting/gradient.dart';
 import 'package:untitled/screens/home/tab2/new_home_screen.dart';
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const HomeScreen(),
+      home: const BAgriScreen(),
       routes: {
         '/newhome':(_)=> const NewHomeScreen(),
         '/myhomepage':(_)=> MyHomePage(),
