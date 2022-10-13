@@ -12,15 +12,12 @@ class BAgriBody extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     Size size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
-      child: Stack(
+    return Stack(
         children:  const <Widget>[
           BackGroundBAgri(),
           Weather(),
-          SizedBox(height: 100,),
           WorkList(),
         ],
-      ),
     );
   }
 }

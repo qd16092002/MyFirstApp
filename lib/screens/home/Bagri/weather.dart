@@ -43,7 +43,7 @@ class Weather extends StatelessWidget {
               child: Image.asset(
                 'assets/images/partly_cloudy.png',
                 height: 220,
-                width: size.width*1/2,
+                width: size.width * 1 / 2,
               ),
             ),
             const Expanded(child: SizedBox()),
@@ -84,29 +84,54 @@ class Weather extends StatelessWidget {
             )
           ],
         ),
-
         Row(
           children: [
-            Padding(padding: EdgeInsets.only(left: size.width*0.075),
-            child: Row(
-              children: [
-                Icon(Icons.circle,color: const Color(0xFFD9D9D9),size: size.width*0.05,),
-                const SizedBox(width: 12,),
-                const Text('68.0%',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 24,color: Colors.white),)
-              ],
-            )
+            Padding(
+                padding: EdgeInsets.only(left: size.width * 0.075),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.circle,
+                      color: const Color(0xFFD9D9D9),
+                      size: size.width * 0.05,
+                    ),
+                    const SizedBox(
+                      width: 12,
+                    ),
+                    const Text(
+                      '68.0%',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 24,
+                          color: Colors.white),
+                    )
+                  ],
+                )),
+            const Expanded(
+              child: SizedBox(),
             ),
-            const Expanded(child: SizedBox(),),
-            Padding(padding: EdgeInsets.only(right: size.width*0.31),
+            Padding(
+              padding: EdgeInsets.only(right: size.width * 0.31),
               child: Row(
                 children: [
-                  Icon(Icons.circle,color: const Color(0xFFD9D9D9),size: size.width*0.05,),
-                  const SizedBox(width: 12,),
-                  const Text('3.4km/h',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 24,color: Colors.white),)
+                  Icon(
+                    Icons.circle,
+                    color: const Color(0xFFD9D9D9),
+                    size: size.width * 0.05,
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  const Text(
+                    '3.4km/h',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 24,
+                        color: Colors.white),
+                  )
                 ],
-              )
+              ),
             ),
-
           ],
         )
       ],
