@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
+import 'package:untitled/screens/home/Bagri/addlist.dart';
 import 'package:untitled/screens/home/Bagri/background.dart';
 import 'package:untitled/screens/home/Bagri/weather.dart';
 import 'package:untitled/screens/home/Bagri/worklist.dart';
@@ -17,6 +18,11 @@ class BAgriBody extends StatelessWidget {
           BackGroundBAgri(),
           Weather(),
           WorkList(),
+          // Padding(padding: EdgeInsets.only(top: 100),
+          //   child: AddWork(),
+          //
+          // )
+          // AddWork(),
         ],
     );
   }

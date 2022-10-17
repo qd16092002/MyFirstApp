@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 class Work extends StatelessWidget {
   const Work(
       {Key? key,
-      required this.namework})
+      required this.namework, required this.imagesofwork})
       : super(key: key);
 
   final String namework;
+  final String imagesofwork;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,10 @@ class Work extends StatelessWidget {
                   ),
                 ],
               ),
+            child: Padding(
+              padding: EdgeInsets.only(left: 15,top: 15),
+              child: Image.asset(imagesofwork,height: 30,width: 30,),
+            )
             ),
           const SizedBox(height: 20),
           Text(
