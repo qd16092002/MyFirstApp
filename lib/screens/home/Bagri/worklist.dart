@@ -23,16 +23,22 @@ class WorkList extends StatelessWidget {
           crossAxisCount: 2,
           childAspectRatio: 0.9,
           children: const [
-            Work(namework: 'Quản lý vườn',imagesofwork: 'assets/images/partly_cloudy.png',),
-            Work(namework: 'Quản lý vườn',imagesofwork: 'assets/images/partly_cloudy.png',),
-            Work(namework: 'Quản lý quy trình',imagesofwork: 'assets/images/quanlykho.png',),
-            Work(namework: 'Quản lý quy trình',imagesofwork: 'assets/images/quanlykho.png',),
-            Work(namework: 'Danh sách công việc',imagesofwork: 'assets/images/quanlykho.png',),
-            Work(namework: 'Danh sách công việc',imagesofwork: 'assets/images/quanlykho.png',),
-            Work(namework: 'Quản lý vườn',imagesofwork: 'assets/images/quanlykho.png',),
-            Work(namework: 'Quản lý vườn',imagesofwork: 'assets/images/quanlykho.png',),
-            Work(namework: 'Quản lý mùa vụ',imagesofwork: 'assets/images/quanlykho.png',),
-            Work(namework: 'Quản lý mùa vụ',imagesofwork: 'assets/images/quanlykho.png',),
+            Work(
+              namework: 'Quản lý kho',
+              imagesofwork: 'assets/images/quanlykho.png',
+            ),
+            Work(
+              namework: 'Quản lý chi tiêu',
+              imagesofwork: 'assets/images/quanlychitieu.png',
+            ),
+            Work(
+              namework: 'Danh sách công việc khoán',
+              imagesofwork: 'assets/images/danhsachcongvieckhoan.png',
+            ),
+            Work(
+              namework: 'Công việc hàng ngày',
+              imagesofwork: 'assets/images/congviechangngay.png',
+            ),
           ],
         ),
       ),

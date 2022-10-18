@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+
 class Work extends StatelessWidget {
-  const Work(
-      {Key? key,
-      required this.namework, required this.imagesofwork})
+  const Work({Key? key, required this.namework, required this.imagesofwork})
       : super(key: key);
 
   final String namework;
@@ -24,23 +23,27 @@ class Work extends StatelessWidget {
                 borderRadius: BorderRadius.circular(18),
                 boxShadow: [
                   BoxShadow(
-                    offset: const Offset(0,13),
+                    offset: const Offset(0, 13),
                     blurRadius: 10,
                     color: const Color(0x1515150D).withOpacity(0.25),
                   ),
                 ],
               ),
-            child: Padding(
-              padding: EdgeInsets.only(left: 15,top: 15),
-              child: Image.asset(imagesofwork,height: 30,width: 30,),
-            )
-            ),
+              child: Padding(
+                padding: const EdgeInsets.only(),
+                child: Image.asset(
+                  imagesofwork,
+                  height: 50,
+                  width: 50,
+                ),
+              )),
           const SizedBox(height: 20),
           Text(
             namework,
+            textAlign: TextAlign.center,
             style: const TextStyle(
-                fontSize: 16,
-                fontFamily:'Inter',
+              fontSize: 16,
+              fontFamily: 'Inter',
               fontWeight: FontWeight.w600,
             ),
           )
