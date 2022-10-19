@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/screens/home/Bagri/weather.dart';
-import 'package:untitled/screens/home/Bagri/color.dart';
 
 class BackGroundBAgri extends StatelessWidget {
   const BackGroundBAgri({Key? key}) : super(key: key);

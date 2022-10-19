@@ -27,7 +27,7 @@ class FlipBarElement extends StatelessWidget {
   /// Passing down widget from upper widget
   final double appBarHeight;
 
-  FlipBarElement(this.icon, this.text, this.frontColor, this.backColor,
+  const FlipBarElement(this.icon, this.text, this.frontColor, this.backColor,
       this.controller, this.onTapped, this.index, this.appBarHeight);
 
   @override

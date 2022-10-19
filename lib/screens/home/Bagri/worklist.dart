@@ -39,6 +39,22 @@ class WorkList extends StatelessWidget {
               namework: 'Công việc hàng ngày',
               imagesofwork: 'assets/images/congviechangngay.png',
             ),
+            Work(
+              namework: 'Quản lý kho',
+              imagesofwork: 'assets/images/quanlykho.png',
+            ),
+            Work(
+              namework: 'Quản lý chi tiêu',
+              imagesofwork: 'assets/images/quanlychitieu.png',
+            ),
+            Work(
+              namework: 'Danh sách công việc khoán',
+              imagesofwork: 'assets/images/danhsachcongvieckhoan.png',
+            ),
+            Work(
+              namework: 'Công việc hàng ngày',
+              imagesofwork: 'assets/images/congviechangngay.png',
+            ),
           ],
         ),
       ),

@@ -43,7 +43,7 @@ class Transactions extends StatelessWidget {
                             Row(
                               children: const [
                                 Expanded(child: Text(
-                                  'Transactionsssssssssssssssssssss',
+                                  'Transactions',
                                   style: TextStyle(
                                       fontSize: 15, color: Colors.white),softWrap: false,maxLines: 1,
                                 ),)

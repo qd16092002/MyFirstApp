@@ -16,27 +16,32 @@ class Work extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-              height: 120,
-              width: 120,
-              decoration: BoxDecoration(
-                color: const Color(0xFFFFFFFF),
-                borderRadius: BorderRadius.circular(18),
-                boxShadow: [
-                  BoxShadow(
-                    offset: const Offset(0, 13),
-                    blurRadius: 10,
-                    color: const Color(0x1515150D).withOpacity(0.25),
-                  ),
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(),
-                child: Image.asset(
-                  imagesofwork,
-                  height: 50,
-                  width: 50,
+            height: 120,
+            width: 120,
+            decoration: BoxDecoration(
+              color: const Color(0xFFFFFFFF),
+              borderRadius: BorderRadius.circular(18),
+              boxShadow: [
+                BoxShadow(
+                  offset: const Offset(0, 13),
+                  blurRadius: 10,
+                  color: const Color(0x1515150D).withOpacity(0.25),
                 ),
-              )),
+              ],
+            ),
+            child: Material(
+              child:ListTile(
+                title: Padding(
+                  padding:const EdgeInsets.only(top: 30),
+                  child: Image.asset(
+                    imagesofwork,
+                    height: 60,
+                    width: 60,
+                  ),
+                ),
+              ),
+            )
+          ),
           const SizedBox(height: 20),
           Text(
             namework,

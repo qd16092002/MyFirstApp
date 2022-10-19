@@ -88,13 +88,17 @@ class _FlipBoxBarState extends State<FlipBoxBar> with TickerProviderStateMixin {
   }
 
   void _changeValue() {
-    _controllers.forEach((controller) => controller.reverse());
+    for (var controller in _controllers) {
+      controller.reverse();
+    }
     _controllers[widget.selectedIndex].forward();
   }
 
   @override
   void dispose() {
     super.dispose();
-    _controllers.forEach((controller) => controller.dispose());
+    for (var controller in _controllers) {
+      controller.dispose();
+    }
   }
 }
