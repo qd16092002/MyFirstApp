@@ -5,7 +5,7 @@ import 'flip/flip_bar_item.dart';
 import 'flip/flip_box_bar.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({super.key, required String title});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
