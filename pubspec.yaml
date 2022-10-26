@@ -40,6 +40,11 @@ dependencies:
   sqflite: ^2.1.0+1
   dio: ^4.0.6
   json_serializable: ^6.5.2
+  flutter_bloc: ^8.1.1
+  http: ^0.13.5
+  equatable: ^2.0.5
+  weather_icons: ^3.0.0
+  path_provider: ^2.0.11
 dev_dependencies:
   flutter_test:
     sdk: flutter

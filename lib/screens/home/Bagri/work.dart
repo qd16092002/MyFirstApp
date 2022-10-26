@@ -15,33 +15,35 @@ class Work extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            height: 120,
-            width: 120,
-            decoration: BoxDecoration(
-              color: const Color(0xFFFFFFFF),
-              borderRadius: BorderRadius.circular(18),
-              boxShadow: [
-                BoxShadow(
-                  offset: const Offset(0, 13),
-                  blurRadius: 10,
-                  color: const Color(0x1515150D).withOpacity(0.25),
-                ),
-              ],
-            ),
-            child: Material(
-              child:ListTile(
-                title: Padding(
-                  padding:const EdgeInsets.only(top: 30),
-                  child: Image.asset(
-                    imagesofwork,
-                    height: 60,
-                    width: 60,
+          SizedBox(
+              height: 120,
+              width: 120,
+              // decoration: BoxDecoration(
+              //   color: const Color(0xFFFFFFFF),
+              //   borderRadius: BorderRadius.circular(18),
+              //   boxShadow: [
+              //     BoxShadow(
+              //       offset: const Offset(0, 13),
+              //       blurRadius: 10,
+              //       color: const Color(0x1515150D).withOpacity(0.25),
+              //     ),
+              //   ],
+              // ),
+              child: Material(
+                elevation: 10,
+                shadowColor: Colors.black,
+                borderRadius: BorderRadius.circular(18),
+                child: ListTile(
+                  title: Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: Image.asset(
+                      imagesofwork,
+                      height: 60,
+                      width: 60,
+                    ),
                   ),
                 ),
-              ),
-            )
-          ),
+              )),
           const SizedBox(height: 20),
           Text(
             namework,

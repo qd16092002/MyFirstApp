@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
 import 'package:untitled/screens/home/Bagri/bagri_home_screen.dart';
 import 'package:untitled/screens/home/components/home_screen.dart';
+import 'package:untitled/screens/home/tab1/home_screen.dart';
 import 'package:untitled/screens/home/tab2/new_home_screen.dart';
+import 'package:untitled/screens/home/tab3/home_screen_3.dart';
 
 void main() {
   runApp(
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       home: const BAgriScreen(),
       routes: {
         '/newhome':(_)=> const NewHomeScreen(),
-        // '/myhomepage':(_)=> MyHomePage(),
+         '/myhomepage':(_)=> MyHomePage(title: 'Hello',),
         '/back':(_)=> const HomeScreen(),
       },
       //HomeScreen(),

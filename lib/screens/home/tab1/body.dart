@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
 import 'package:untitled/screens/home/components/choose.dart';
 import 'package:untitled/screens/home/components/transactions.dart';
+import 'package:untitled/screens/home/tab1/transactions.dart';
+import 'choose.dart';
 import 'header_with_searchbox.dart';
 
 class Body extends StatelessWidget {

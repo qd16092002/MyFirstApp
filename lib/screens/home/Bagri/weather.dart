@@ -1,7 +1,18 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class Weather extends StatelessWidget {
-  const Weather({Key? key}) : super(key: key);
+  Weather({Key? key}) : super(key: key);
+  late String country;
+  Future<String> getInformationWeather() async{
+    Dio dio = Dio();
+    var res = await dio.get('http://api.openweathermap.org/data/2.5/weather?exclude=hourly,daily&q=hanoi&appid=11ae336e96748518e655aa2b8e31673b&lang=vi') ;
+    //print(res.data.toString());
+    print(DateTime.now().day);
+
+     country = res.data['name'];
+     return "";
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,17 +62,17 @@ class Weather extends StatelessWidget {
               padding: EdgeInsets.only(right: size.width * 0.15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
-                    'Hà nội',
-                    style: TextStyle(
+                    country,
+                    style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w600,
                         color: Color(0xFFFFFFFF)),
-                    softWrap: false,
-                    maxLines: 1,
+                    // softWrap: false,
+                    // maxLines: 1,
                   ),
-                  Text(
+                  const Text(
                     '30ºC',
                     style: TextStyle(
                         fontSize: 48,
@@ -70,7 +81,7 @@ class Weather extends StatelessWidget {
                     softWrap: false,
                     maxLines: 1,
                   ),
-                  Text(
+                  const Text(
                     'Có nắng',
                     style: TextStyle(
                         fontSize: 16,
@@ -133,8 +144,15 @@ class Weather extends StatelessWidget {
               ),
             ),
           ],
-        )
+        ),
+        // GestureDetector(
+        //   onTap: () async{
+        //     await getInformationWeather();
+        //   },
+        //   child: const Text("TEST GET INFORMATION WEATHER"),
+        // )
       ],
     );
   }
 }
+
