@@ -4,13 +4,20 @@ import 'package:flutter/material.dart';
 class Weather extends StatelessWidget {
   Weather({Key? key}) : super(key: key);
   late String country;
-  Future<String> getInformationWeather() async{
+  late String hour;
+  Future<String> getInformationWeather() async {
+    setState(() {
+      country = res.data['name'];
+      hour = DateTime.now().hour as String;
+    });
     Dio dio = Dio();
+
     var res = await dio.get('http://api.openweathermap.org/data/2.5/weather?exclude=hourly,daily&q=hanoi&appid=11ae336e96748518e655aa2b8e31673b&lang=vi') ;
     //print(res.data.toString());
     print(DateTime.now().day);
+    print(res.data['main']['temp_min']);
 
-     country = res.data['name'];
+
      return "";
   }
 
@@ -34,8 +41,8 @@ class Weather extends StatelessWidget {
             const Expanded(child: SizedBox()),
             Padding(
               padding: EdgeInsets.only(top: 32, right: size.width * 0.075),
-              child: const Text(
-                '3.30 PM',
+              child:  const Text(
+                '3:30 PM',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 16,
@@ -64,7 +71,7 @@ class Weather extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    country,
+                    "Hà Nội ",
                     style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w600,
@@ -145,12 +152,12 @@ class Weather extends StatelessWidget {
             ),
           ],
         ),
-        // GestureDetector(
-        //   onTap: () async{
-        //     await getInformationWeather();
-        //   },
-        //   child: const Text("TEST GET INFORMATION WEATHER"),
-        // )
+        GestureDetector(
+          onTap: () async{
+            await getInformationWeather();
+          },
+          child: const Text("TEST GET INFORMATION WEATHER"),
+        )
       ],
     );
   }
