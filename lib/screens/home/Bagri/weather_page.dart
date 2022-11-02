@@ -1,24 +1,49 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class Weather extends StatelessWidget {
-  Weather({Key? key}) : super(key: key);
+class WeatherPage extends StatefulWidget {
+  @override
+  _WeatherPageState createState() {
+    return _WeatherPageState();
+  }
+}
+
+class _WeatherPageState extends State<WeatherPage> {
   late String country = "";
-  late String hour;
+  late String description = "";
+  late double nhietdo = 0;
+  late int day=0;
+  late int month=0;
+  late int year =0 ;
+  late int hour=0;
+  late int minute=0;
 
   Future<String> getInformationWeather() async {
-    // setState(() {
-    //   country = res.data['name'];
-    //   hour = DateTime.now().hour as String;
-    // });
     Dio dio = Dio();
 
-    var res = await dio.get('http://api.openweathermap.org/data/2.5/weather?exclude=hourly,daily&q=hanoi&appid=11ae336e96748518e655aa2b8e31673b&lang=vi') ;
+    var res = await dio.get(
+        'http://api.openweathermap.org/data/2.5/weather?exclude=hourly,daily&q=hanoi&appid=11ae336e96748518e655aa2b8e31673b&lang=vi');
     //print(res.data.toString());
-    print(DateTime.now().day);
-    country=res.data["name"];
+    print(DateTime.now());
+    // print(res.data["weather"][0]["description"]);
+    setState(() {
+      country = res.data["name"];
+      description = res.data["weather"][0]["description"];
+      nhietdo = res.data["main"]["temp"].floor() - 273;
+      day= DateTime.now().day;
+      month= DateTime.now().month;
+      year= DateTime.now().year;
+      hour=DateTime.now().hour;
+      minute=DateTime.now().minute;
+    });
 
-     return "";
+    return "";
+  }
+
+  @override
+  void initState() {
+    getInformationWeather();
+    super.initState();
   }
 
   @override
@@ -30,9 +55,9 @@ class Weather extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(top: 32, left: size.width * 0.075),
-              child: const Text(
-                'Ngày 8, tháng 10,2022',
-                style: TextStyle(
+              child: Text(
+                'Ngày $day, tháng $month,$year',
+                style: const TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 16,
                     color: Colors.white),
@@ -41,9 +66,9 @@ class Weather extends StatelessWidget {
             const Expanded(child: SizedBox()),
             Padding(
               padding: EdgeInsets.only(top: 32, right: size.width * 0.075),
-              child:  const Text(
-                '3:30 PM',
-                style: TextStyle(
+              child: Text(
+                '$hour:$minute',
+                style: const TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 16,
                     color: Colors.white),
@@ -69,7 +94,6 @@ class Weather extends StatelessWidget {
               padding: EdgeInsets.only(right: size.width * 0.15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-
                 children: [
                   Text(
                     country ?? "",
@@ -81,8 +105,8 @@ class Weather extends StatelessWidget {
                     // maxLines: 1,
                   ),
                   Text(
-                    '30ºC',
-                    style: TextStyle(
+                    "$nhietdo"  "ºC",
+                    style: const TextStyle(
                         fontSize: 48,
                         fontWeight: FontWeight.w400,
                         color: Color(0xFFFFFFFF)),
@@ -90,8 +114,8 @@ class Weather extends StatelessWidget {
                     maxLines: 1,
                   ),
                   Text(
-                    'Có nắng',
-                    style: TextStyle(
+                    description ?? "".toUpperCase(),
+                    style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: Color(0xFFFFFFFF)),
@@ -152,15 +176,8 @@ class Weather extends StatelessWidget {
               ),
             ),
           ],
-        ),
-        GestureDetector(
-          onTap: () async{
-            await getInformationWeather();
-          },
-          child: const Text("TEST GET INFORMATION WEATHER"),
         )
       ],
     );
   }
 }
-
