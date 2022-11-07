@@ -14,15 +14,12 @@ class _JsonPageState extends State<JsonPage> {
   late String name = "";
   late int postId;
   late int id;
-
   late String email = "";
   late String body = "";
 
   Future<String> getInformationWeather() async {
     Dio dio = Dio();
-
     var res = await dio.get('https://jsonplaceholder.typicode.com/comments');
-
     setState(() {
       name = res.data[0]["name"];
       postId = res.data[0]["postId"];
@@ -30,7 +27,6 @@ class _JsonPageState extends State<JsonPage> {
       email = res.data[0]["email"];
       body = res.data[0]["body"];
     });
-
     return "";
   }
 
