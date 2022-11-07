@@ -13,7 +13,7 @@ class BAgriBody extends StatelessWidget {
       children:  <Widget>[
         BackGroundBAgri(),
         WeatherPage(),
-        WorkList(),
+        // WorkList(),
         ],
     );
   }

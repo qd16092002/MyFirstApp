@@ -2,10 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
 import 'package:untitled/screens/home/Bagri/bagri_home_screen.dart';
+import 'package:untitled/screens/home/Json%20training/test.dart';
 import 'package:untitled/screens/home/components/home_screen.dart';
 import 'package:untitled/screens/home/tab1/home_screen.dart';
 import 'package:untitled/screens/home/tab2/new_home_screen.dart';
 import 'package:untitled/screens/home/tab3/home_screen_3.dart';
+import 'package:untitled/use_json.dart';
 
 void main() {
   runApp(
@@ -33,7 +35,8 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const BAgriScreen(),
+      home: //const BAgriScreen(),
+      JsonPage(),
       routes: {
         '/newhome':(_)=> const NewHomeScreen(),
          '/myhomepage':(_)=> MyHomePage(title: 'Hello',),
