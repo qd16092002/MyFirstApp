@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class JsonPage extends StatefulWidget {
+  const JsonPage({super.key});
+
   @override
   _JsonPageState createState() {
     return _JsonPageState();
